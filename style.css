@@ -9,41 +9,51 @@ body{
 }
 header{
 	display: grid;
-	grid-template-rows: 46px 100%;
+	grid-template-rows: minmax(46px, auto); 100px;
+
+}
+.menu-btn{
+	display: none;
 }
 .header-contact{
 	color: #00000080;
 	background: #1eaaf1;
 	font-size: 15px;
 	font-family: 'Work Sans', sans-serif;
-	padding: 0 5%;
+	padding: 0.5%;
 	display: flex;
 	text-transform: capitalize;
 	font-size: 15px;
 	justify-content: space-between;
 	align-items: center;
+
+}
+.header-menu{
+	color: #00000080;
+	background: white;
+	font-size: 16px;
+
 }
 .header-menu{
 	display: flex;
 	justify-content: space-between;
 	padding: 0px 5%;
 	align-items: center;
-	font-size: 16px;
+	font-size: 30px;
     box-shadow: box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;;
-
+    height: 70px;
+    
 }
 .circle{
 	padding: 8px;
-	border-radius: 100px;
+	border-radius: 100%;
 	color: white;
-	margin: 15px;
+	margin-right: 15px;
 }
 
 .header-contact a{
 	text-decoration: none;
 	color: #ffffffb3;
-	font-family: 'Work Sans', sans-serif;
-    margin-right: 6.5px;
 }
 .header-menu nav{
 	display: flex;
@@ -51,29 +61,29 @@ header{
 }
 .header-menu a{
 	font-size: 15px;
-	font-family: 'Work Sans', sans-serif;
+	font-family: "oswald", sans-serif;
 	color: black;
 	text-transform: capitalize;
 	font-weight: 600;
 	text-decoration: none;
-	height: 80px;
-	text-align: center;
 }
 .logo{
-	font-size: 27px;
+	font-size: 25px;
 	font-weight: bolder;
-	color: ;
 	font-family: 'Work Sans', sans-serif;
-
 }
 .carousel img{
-	height: 650px;
+	height: 550px !important;
 	object-fit: cover;
 }
 .carousel-caption{
 	top: 200px;
-	font-size: 75px;
-	font-weight: bolder;
+	font-size: 50px;
+	font-weight: 800;
+	color: white;
+	line-height: 90px;
+	z-index: 20;
+
 }
 .btn{
 	font-size: 20px !important;
@@ -109,6 +119,7 @@ header{
 .what{
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
+
 	padding: 20px 1%;
 	margin-top: -10%;
 }
@@ -221,6 +232,11 @@ h2 {
 	font-weight: bold;
 	font-size: 50px;
 }
+.lorem{
+	text-align: center;
+	color: white;
+	font-size: 20px;
+}
 .lab{
 	display: flex;
 	justify-content: center;
@@ -228,8 +244,10 @@ h2 {
 	flex-direction: column;
 	height: 400px;
 	text-transform: capitalize;
+	text-align: center;
 }
 .web{
+	height: 80%;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 
@@ -242,16 +260,35 @@ h2 {
 	color: white;
 	padding: 30px 50px;
 	font-size: 20px;
+
+}
+.far{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 20px;
+	padding-bottom: 5%;
+
+}
+.far img{
+
+	width: 130px;
+	height: 130px;
+	border-radius: 100%;
+	object-fit: cover;
+}
+.gray{
+	background-color: rgba(235, 244, 243, .961);
 }
 .web img{
+
 	width: 100%;
 	object-fit: cover;
 
 }
 .dolar{
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 30px;
+	letter-spacing: 60px;
+	padding-top: 40px;
 }
 .hello h3{
 	padding-top: 10%;
@@ -265,16 +302,21 @@ h2 {
 	text-align: center;
 }
 .bas{
+	padding-top: 5%;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 }
 .pap img{
 	width: 90%;
 }
+.pap{
+	text-align: center;
+}
 
 .zip{
 	padding-top: 10%;
 	display: flex;
+	text-align: center;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
@@ -289,6 +331,9 @@ h2 {
 	grid-template-columns: repeat(4, 1fr);
 	
 }
+.sit{
+	padding-left: 10px;
+}
 .sit img{
 	height: 35%;
 }
@@ -299,7 +344,136 @@ h2 {
 .ofend img{
 	width: 100%;
 }
+.ony{
+	background-color: black;
+	height: 600px;
+	color: white;
+}
+.oney{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	padding-top: 70px;
+	text-transform: capitalize;
+	font-family: "oswald",sans serif;
+	font-weight: 700px;
+	padding-left: 35px;
+}
+.mute{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	padding-left: 35px;
+	padding-top: 80px;
+	line-height: 2em;
+	text-transform: capitalize;
+}
+@media(max-width:650px){
+	.menu-btn{
+	display: block;
+	justify-self: flex-end;
 
+   }
+
+	.header-contact{
+		flex-direction: column;
+		gap: 20px;
+		align-items: baseline;
+		padding: 20px;
+		font-size: 9px;
+		
+	}
+
+	.header-menu{
+		display: grid;
+		/*justify-content: space-between;*/
+		grid-template-columns: repeat(2, 1fr);
+		align-items: center;
+		
+	}
+	.header-menu nav{
+		display: flex;
+		flex-direction: column;
+		z-index: 2000;
+		margin-top: 30px;
+		background: rgba(0, 0, 0, 0.888);
+		position: absolute;
+		left: 0;
+		top: 164px;
+		width: 100vw;
+		padding: 20px 20px;
+		transform: translateX(-510px);
+		transition: all 0.5s ease-out 0.2;
+		/*opacity: 0;*/
+	}
+	 nav.show{
+		transition: all 0.5s ease-in 0.2;
+		transform: translateX(0px);
+		/*opacity: 1;*/
+	}
+	.header-menu a{
+		color: white;
+		font-size: 80%;
+		line-height: 20px;
+		font-weight: 300;
+	}
+	.carousel-caption p{
+       font-size: 20px;
+	}
+	.card-wrapper{
+		grid-template-columns: 1fr;
+	}
+	.what{
+		grid-template-columns: 1fr;
+	}
+	.offer-content{
+		grid-template-columns: 1fr;
+	}
+	.kiddos{
+		margin-top: 15%;
+	}
+
+	.container{
+		grid-template-columns: 1fr;
+	}
+	.cood{
+		font-size: 70%;
+	}
+	.cood h2{
+		font-size: 90%;
+	} 
+	.pen{
+		font-size: 80%;
+	}
+	
+	.bas{
+		grid-template-columns: 1fr;
+	}
+	.far{
+display: flex;
+flex-direction: column;
+	}
+.web{
+	display: flex;
+	flex-direction: column;
+}
+.wid-card{
+	display: flex;
+	flex-direction: column;
+}
+.wid{
+	grid-template-columns: 1fr;
+	}
+	.mag{
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+	}	
+	.ofend{
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.pen{
+
+	}
+}
 
 
 
